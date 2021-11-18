@@ -1,0 +1,44 @@
+body{
+    display: inline-flexbox;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: left;
+    background-color:rgb(163, 162, 162);
+    
+}
+button{
+    background-color: #063780; 
+    color: rgb(248, 144, 74); 
+}
+.cancelbtn { 
+    width: auto; 
+    padding: 10px 18px;
+    margin: 10px 5px;
+} 
+.purchasebtn { 
+    width: auto; 
+    padding: 15px 23px;
+    margin: 13px 8px;
+} 
+header{
+    width: auto;
+    padding: auto;
+    background-color: rgb(248, 144, 74);
+}
+#header__section{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+#root{
+    margin-left: 8%;
+    margin-right: 8%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#ul__nav asdli{
+    display:list-item;
+    padding-left: 1px;
+    padding-right: 1px;
+    list-style: none;
+}

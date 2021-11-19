@@ -1,11 +1,11 @@
 import { SelectProvincia,AddOptions } from "../components/selectProvincia.js"
 import { getProvincias, getLocalidades } from "../services/fetchServices.js";
-import { Nav } from "../components/nav.js";
+import { NavSinLogin, NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= Nav();
+    _root.innerHTML+= NavSinLogin();
 }
 const FooterRender =() =>{
     let _root = document.getElementById("footer-distributed");
@@ -38,5 +38,6 @@ export const IndexRenderLocalidades =(provinciaId) =>{
 export const RegistroRender = ()=> {
     NavRender();
     FooterRender();
+    debugger
     getProvincias(RenderProvincias)
 }

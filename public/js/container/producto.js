@@ -1,11 +1,11 @@
-import { Nav } from "../components/nav.js";
+import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { getProductoById } from "../services/fetchServices.js";
 import { Producto } from "../components/product.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= Nav();
+    _root.innerHTML+= NavSinLogin();
 }
 
 const FooterRender =() =>{

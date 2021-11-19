@@ -45,7 +45,10 @@ export const getCategoria = (id,callback)=>{
 }
 
 export const getProvincias = (callback)=>{
-    fetch(`${UrlApiAddress}/Provincias`,{
+    
+    let url = `${UrlApiAddress}/Provincias`
+    debugger
+    fetch(url,{
         method: 'GET'
     })
     .then((httpResponse)=>{

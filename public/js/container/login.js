@@ -1,12 +1,12 @@
 import {jwtDecode} from "../../lib/js/jwt-decode.js";
-import { Nav } from "../components/nav.js";
+import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { LoginBox } from "../components/loginBox.js";
 import { LoginUser } from "../services/login/login.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= Nav();
+    _root.innerHTML+= NavSinLogin();
 }
 const FooterRender =() =>{
     let _root = document.getElementById("footer-distributed");
@@ -18,9 +18,10 @@ const LoginInit =() =>{
 }
 
 const LoginExitosoRender =(json)=>{
-    window.localStorage.setItem("User",json.token)
+    window.localStorage.setItem("Top Choise User",json.token)
     var decoded = jwtDecode(json.token);
     console.log("Email: "+decoded.payload.email +"User Id: " +decoded.payload.UserId)
+    window.location.href = "../"
 }
 
 

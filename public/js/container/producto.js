@@ -1,3 +1,4 @@
+import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { getProductoById } from "../services/fetchServices.js";
@@ -7,7 +8,10 @@ const  NavRender =() =>{
     let _root = document.getElementById("navigator");
     _root.innerHTML+= NavSinLogin();
 }
-
+const NavbarLogin =(email) =>{
+    let _root = document.getElementById("navigator");
+    _root.innerHTML+= NavConLogin(email);
+}
 const FooterRender =() =>{
     let _root = document.getElementById("footer-distributed");
     _root.innerHTML+= Footer();
@@ -18,7 +22,17 @@ const ProductRender =(json) =>{
 }
 
 export const ProductoRender = (productId)=> {
-    NavRender();
+    if(window.localStorage.getItem("Top Choise User")){
+        console.log(window.localStorage.getItem("Top Choise User"))
+        debugger
+        var decoded = jwtDecode(window.localStorage.getItem("Top Choise User"));
+        debugger
+        NavbarLogin(decoded.payload.email);
+    }
+    else{
+        NavRender();
+        console.log('No hay usuario logueado')
+    }
     FooterRender();
     getProductoById(productId,ProductRender)
 }

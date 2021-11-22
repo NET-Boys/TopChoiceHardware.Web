@@ -15,7 +15,8 @@ const FooterRender =() =>{
 const ProductosRender = (json) =>{
     let _root=document.getElementById("root");
     Object.values(json).forEach(producto => {
-        _root.innerHTML+=CardProducto(producto.productId,producto.image,producto.productName,producto.description,producto.unitPrice)
+        debugger
+        _root.innerHTML+=CardProducto(producto.productId,producto.image,producto.productName,producto.description,producto.unitPrice,producto.unitsInStock)
     });
 }
 const NavbarLogin =(email) =>{
@@ -24,7 +25,7 @@ const NavbarLogin =(email) =>{
 }
 
 export const IndexRender = ()=> {
-    window.localStorage.setItem('products','')
+    
     FooterRender();
     getProductos(ProductosRender);
     if(window.localStorage.getItem("Top Choise User")){

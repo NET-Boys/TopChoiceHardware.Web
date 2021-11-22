@@ -1,15 +1,17 @@
-function agregarAlCarrito(productoId){
+function agregarAlCarrito(productoId,stock){
     console.log('se ha agregado el producto numero '+productoId)
-    addProduct(productoId)
+    debugger
+    addProduct(productoId,stock)
 }
 
-
-function addProduct(productoId){
+function addProduct(productoId,stock){
     
     let products = [];
     if(localStorage.getItem('products'))
         products = JSON.parse(localStorage.getItem('products'));
-        if(EstaAgregado(productoId)){
+        debugger
+
+        if(EstaAgregado(productoId,stock)){
             alert('Se ha incrementado en 1 la cantidad del elemento con id: '+productoId)
         }
         else{
@@ -20,7 +22,7 @@ function addProduct(productoId){
     
 }
 
-function EstaAgregado(productoId){
+function EstaAgregado(productoId,stock){
     let products = [];
     if(localStorage.getItem('products')){
         products = JSON.parse(localStorage.getItem('products'));
@@ -32,10 +34,16 @@ function EstaAgregado(productoId){
                 "productId":products[i].productId,
                 "cantidad":products[i].cantidad+1
             }
-            products.splice(i, 1);
-            products.push(productoTemporal)
-            localStorage.setItem('products', JSON.stringify(products));
-            return true
+            if (products[i].cantidad>=stock) {
+                alert('No hay stock suficiente para vender lo solicitado')
+                return false
+            }
+            else{
+                products.splice(i, 1);
+                products.push(productoTemporal)
+                localStorage.setItem('products', JSON.stringify(products));
+                return true
+            }
         }
      }
 

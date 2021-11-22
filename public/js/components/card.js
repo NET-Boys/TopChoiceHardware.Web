@@ -1,4 +1,4 @@
-export const CardProducto = (productoId,imagen, nombre, descripcion,precio) =>`
+export const CardProducto = (productoId,imagen, nombre, descripcion,precio,stock) =>`
         <div class="product-card">
         <div class="product-tumb">
             <img src="${imagen}" alt="">
@@ -9,7 +9,7 @@ export const CardProducto = (productoId,imagen, nombre, descripcion,precio) =>`
             <div class="product-bottom-details">
                 <div class="product-price">$${precio}</div>
                 <div class="product-links">
-                    <a onclick="agregarAlCarrito(${productoId})"><i class="fa fa-shopping-cart"></i></a>
+                    <a onclick="agregarAlCarrito(${productoId},${stock})"><i class="fa fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>

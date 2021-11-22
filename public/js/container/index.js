@@ -1,7 +1,7 @@
 import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { CardProducto } from "../components/card.js"
 import { Footer } from "../components/footer.js";
-import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js"
+import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
 import { getProductos, getCategoria } from "../services/fetchServices.js";
 
 const  NavRender =() =>{
@@ -24,15 +24,12 @@ const NavbarLogin =(email) =>{
 }
 
 export const IndexRender = ()=> {
-    
+    window.localStorage.setItem('products','')
     FooterRender();
     getProductos(ProductosRender);
-    debugger
     if(window.localStorage.getItem("Top Choise User")){
         console.log(window.localStorage.getItem("Top Choise User"))
-        debugger
         var decoded = jwtDecode(window.localStorage.getItem("Top Choise User"));
-        debugger
         NavbarLogin(decoded.payload.email);
     }
     else{

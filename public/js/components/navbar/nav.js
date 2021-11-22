@@ -43,6 +43,31 @@ export const NavConLogin = (email) =>`
   </nav>
 `
 
+export const NavPrueba = () =>`
+  <nav class="navbar navbar-expand-lg navbar-dark bgcolor " id="navegador">
+    <div class="container-fluid">
+        <a class="navbar-brand logo-empresa" href="../../"><img src="../img/logo.png" height="80" alt="" loading="lazy" style="margin-top: -1px;"/></a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="botonToggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div id = "margen-barra" class="" id="">
+          <div class="container">
+            <ul class="navbar-right">
+              <li>
+                <a href="#" class="my-cart-icon">
+                  <i class="fa fa-shopping-cart"></i>
+                  Cart 
+                  <span class="badge my-cart-counter">0</span>
+                </a>
+              </li>
+            </ul> <!--end navbar-right -->
+          </div> <!--end container -->
+        </div>
+    </div>
+  </nav>
+`
+
 
 
 

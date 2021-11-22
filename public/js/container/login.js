@@ -19,6 +19,7 @@ const LoginInit =() =>{
 
 const LoginExitosoRender =(json)=>{
     window.localStorage.setItem("Top Choise User",json.token)
+    
     var decoded = jwtDecode(json.token);
     console.log("Email: "+decoded.payload.email +"User Id: " +decoded.payload.UserId)
     window.location.href = "../"

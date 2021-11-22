@@ -9,7 +9,7 @@ export const CardProducto = (productoId,imagen, nombre, descripcion,precio) =>`
             <div class="product-bottom-details">
                 <div class="product-price">$${precio}</div>
                 <div class="product-links">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a onclick="agregarAlCarrito(${productoId})"><i class="fa fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>

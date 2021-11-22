@@ -33,7 +33,7 @@ export const NavConLogin = (email) =>`
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="#">Accion</a></li>
               <li><a class="dropdown-item" href="#">Otra accion</a></li>
-              <li><a id="cerrar-sesion" class="dropdown-item" onclick='CerrarSesion()'>Cerrar Sesión</a></li>
+              <li><a id="cerrar-sesion" href="" class="dropdown-item" onclick='CerrarSesion()'>Cerrar Sesión</a></li>
             </ul>
           </li>
         </ul>

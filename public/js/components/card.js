@@ -4,12 +4,14 @@ export const CardProducto = (productoId,imagen, nombre, descripcion,precio,stock
             <img src="${imagen}" alt="">
         </div>
         <div class="product-details">
-            <h4><a id="${productoId}" href='../producto?productoId=${productoId}'>${nombre}</a></h4>
-            <p>${descripcion}</p>
+            <div class="titulo-descripcion">
+                <h1><a id="${productoId}" href='../producto?productoId=${productoId}'>${nombre}</a></h1>
+                <p>${descripcion}</p>
+            </div>
             <div class="product-bottom-details">
                 <div class="product-price">$${precio}</div>
                 <div class="product-links">
-                    <a onclick="agregarAlCarrito(${productoId},${stock})"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="" onclick="agregarAlCarrito(${productoId},${stock})"><i class="fa fa-shopping-cart fa-lg"></i></a>
                 </div>
             </div>
         </div>

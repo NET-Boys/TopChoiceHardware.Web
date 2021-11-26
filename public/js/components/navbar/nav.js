@@ -30,6 +30,9 @@ export const NavConLogin = (email) =>`
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               ${email}
             </a>
+            <a id="buy-button" href="../ordenDeCompra">
+              <img src="../../img/buy.png" alt="imagenBoton"></img>
+            </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="#">Accion</a></li>
               <li><a class="dropdown-item" href="#">Otra accion</a></li>

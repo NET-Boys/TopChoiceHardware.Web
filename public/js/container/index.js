@@ -15,7 +15,6 @@ const FooterRender =() =>{
 const ProductosRender = (json) =>{
     let _root=document.getElementById("root");
     Object.values(json).forEach(producto => {
-        debugger
         _root.innerHTML+=CardProducto(producto.productId,producto.image,producto.productName,producto.description,producto.unitPrice,producto.unitsInStock)
     });
 }

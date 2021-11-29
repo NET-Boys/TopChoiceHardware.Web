@@ -7,8 +7,8 @@ function agregarAlCarrito(productoId,stock){
 function addProduct(productoId,stock){
     
     let products = [];
-    if(localStorage.getItem('products'))
-        products = JSON.parse(localStorage.getItem('products'));
+    if(localStorage.getItem('order')){
+        products = JSON.parse(localStorage.getItem('order'));
         debugger
 
         if(EstaAgregado(productoId,stock)){
@@ -16,19 +16,19 @@ function addProduct(productoId,stock){
         }
         else{
             products.push({'productId' : productoId,'cantidad' : 1});
-            localStorage.setItem('products', JSON.stringify(products));
+            localStorage.setItem('order', JSON.stringify(products));
             alert('Se ha agregado exitosamente el elemento al carrito')
         }
+    }
     
 }
 
 function EstaAgregado(productoId,stock){
     let products = [];
-    if(localStorage.getItem('products')){
-        products = JSON.parse(localStorage.getItem('products'));
+    if(localStorage.getItem('order')){
+        products = JSON.parse(localStorage.getItem('order'));
     }
     for (var i = 0; i < Object.keys(products).length; i++) {
-        
         if (products[i].productId==productoId) {
             let productoTemporal ={
                 "productId":products[i].productId,
@@ -41,15 +41,9 @@ function EstaAgregado(productoId,stock){
             else{
                 products.splice(i, 1);
                 products.push(productoTemporal)
-                localStorage.setItem('products', JSON.stringify(products));
+                localStorage.setItem('order', JSON.stringify(products));
                 return true
             }
         }
      }
-
-
-
-    
-
-
 }

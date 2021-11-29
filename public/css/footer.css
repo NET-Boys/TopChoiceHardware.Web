@@ -1,6 +1,12 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
 footer{
-    
+    background-color: black;
+    position: absolute;
     bottom: 0;
+    width: 100%;
    }
    .footer-distributed{
     background-color: #292c2f;
@@ -10,7 +16,7 @@ footer{
     text-align: left;
     font: bold 16px sans-serif;
     
-    padding: 55px 50px;
+    padding: 20px 50px;
     margin-top: 80px;
    }
     

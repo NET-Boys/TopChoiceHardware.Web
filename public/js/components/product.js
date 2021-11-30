@@ -1,4 +1,4 @@
-export const Producto = (productoId, imagen, nombre, descripcion,precio,marca, url) =>`
+export const Producto2 = (productoId, imagen, nombre, descripcion,precio,marca, url) =>`
 <div class="container-fluid">
 <div class="row">
   <div class="col-md-8 mx-auto">
@@ -15,7 +15,7 @@ export const Producto = (productoId, imagen, nombre, descripcion,precio,marca, u
       <dd>Modelo</dd>
       <dt>Descripcion:</dt>
       <dd>${descripcion}</dd>
-      <dt><a href="${url}" target="_blank">Link para mas detalles</a></dt>
+      <dt><a  target="_blank">Link para mas detalles</a></dt>
       
     </dl> 
     <h3 class="text-center text-warning">
@@ -26,4 +26,21 @@ export const Producto = (productoId, imagen, nombre, descripcion,precio,marca, u
   </div>
 </div>
 </div>
+`
+
+export const ProductoTitulo = (nombre) =>`
+<h2>${nombre}</h2>
+`
+
+export const ProductoPrecio = (precio) =>`
+<span>$${precio}</span>
+`
+
+export const ProductoDescripcion = (descripcion) =>`
+${descripcion}
+`
+
+export const ProductoLink = (url) =>`
+<a href="${url}" target="_blank" style="color:#ff5e63;font-weight:bold;">aqui</a>
+
 `

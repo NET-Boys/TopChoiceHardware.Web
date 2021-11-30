@@ -2,7 +2,7 @@ import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { getProductoById } from "../services/fetchServices.js";
-import { ProductoTitulo, ProductoPrecio,ProductoDescripcion, ProductoLink } from "../components/product.js";
+import { ProductoTitulo, ProductoPrecio,ProductoDescripcion, ProductoLink, ProductoSlider} from "../components/product.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -28,6 +28,15 @@ const ProductRender =(json) =>{
     
     let _link = document.getElementById("producto-link");
     _link.innerHTML+= ProductoLink(json.url);
+    
+    let _slider = document.getElementById("slider");
+    let _thumb = document.getElementById("thumb");
+    json.carousel.forEach(imagen => {
+        debugger
+        _slider.innerHTML+= ProductoSlider(imagen)
+        _thumb.innerHTML+= ProductoSlider(imagen)
+    });
+
 }
 
 export const ProductoRender = (productId)=> {

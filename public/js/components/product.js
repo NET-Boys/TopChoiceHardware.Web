@@ -42,5 +42,10 @@ ${descripcion}
 
 export const ProductoLink = (url) =>`
 <a href="${url}" target="_blank" style="color:#ff5e63;font-weight:bold;">aqui</a>
+`
 
+export const ProductoSlider = (img) =>`
+<div class="item">
+  <img src="${img}" />
+</div>
 `

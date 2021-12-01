@@ -21,7 +21,7 @@ const RenderCarrito=(json)=>{
     let _productos = document.getElementById("productos");
     
     json.forEach(producto => {
-        _productos.innerHTML+=CarritoProducto(producto.imagen,producto.name,producto.price,producto.cantidad)
+        _productos.innerHTML+=CarritoProducto(producto.productId,producto.imagen,producto.name,producto.price,producto.cantidad)
     });
     AlgoritmoCarrito()
     

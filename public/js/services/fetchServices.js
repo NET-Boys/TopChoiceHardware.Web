@@ -44,7 +44,6 @@ export const getProductsInCart=(json,callback)=>{
         json.forEach(productoCarrito => {
             body.forEach(bodyProduct => {
                 if (productoCarrito.productId==bodyProduct.productId) {
-                    debugger
                     productoTemporal.productId=bodyProduct.productId
                     productoTemporal.name=bodyProduct.productName
                     productoTemporal.cantidad=productoCarrito.cantidad

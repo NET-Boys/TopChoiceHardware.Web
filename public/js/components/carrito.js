@@ -1,4 +1,4 @@
-export const CarritoProducto = (imagen,name,price,cantidad) =>`
+export const CarritoProducto = (productId,imagen,name,price,cantidad) =>`
 <div class="basket-product">
           <div class="item">
             <div class="product-image">
@@ -14,7 +14,7 @@ export const CarritoProducto = (imagen,name,price,cantidad) =>`
           </div>
           <div class="subtotal">${price}</div>
           <div class="remove">
-            <button>Eliminar</button>
+            <button onclick="EliminarProducto(${productId})">Eliminar</button>
           </div>
         </div>
 `

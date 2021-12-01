@@ -70,5 +70,12 @@ function IncrementarCantidad(productoId,stock,cantidad){
         window.location.href='#popup2'
     }
 }
-
-
+function EliminarProducto(productId){
+    let productos=JSON.parse(localStorage.getItem('order'));
+    for (var i = 0; i < Object.keys(productos).length; i++) {
+        if (productos[i].productId==productId) {
+            productos.splice(i,1)
+        }
+    }
+    localStorage.setItem('order', JSON.stringify(productos));
+}

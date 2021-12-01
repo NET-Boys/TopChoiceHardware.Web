@@ -1,9 +1,10 @@
 import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { Footer } from "../components/footer.js";
 import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
-import { CarritoProducto } from "../components/carrito.js";
+import { CarritoProducto, CarritoAside } from "../components/carrito.js";
 import { getProductsInCart } from "../services/fetchServices.js";
 import { AlgoritmoCarrito } from "../../lib/js/orderAlgorithm.js";
+
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
     _root.innerHTML+= NavSinLogin();
@@ -19,10 +20,13 @@ const NavbarLogin =(email) =>{
 const RenderCarrito=(json)=>{
     
     let _productos = document.getElementById("productos");
-    
+    let _carritoAside = document.getElementById("orden-aside")
+    let montoTotal=0;
     json.forEach(producto => {
-        _productos.innerHTML+=CarritoProducto(producto.productId,producto.imagen,producto.name,producto.price,producto.cantidad)
+        _productos.innerHTML+=CarritoProducto(producto.productId,producto.imagen,producto.name,producto.price,producto.cantidad,producto.stock)
+        montoTotal+=(producto.price*producto.cantidad)
     });
+    _carritoAside.innerHTML+=CarritoAside(montoTotal)
     AlgoritmoCarrito()
     
 }

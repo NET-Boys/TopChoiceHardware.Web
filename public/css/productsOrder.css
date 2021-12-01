@@ -8,12 +8,16 @@ html a {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
-body {
-  background-color: #fff;
-  color: #666;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 62.5%;
-  margin: 0 auto;
+#carrito{
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#price{
+  color:#8100d6;
+  font-size: 20px;
+  font-weight: bold;
+
 }
 
 a {
@@ -36,6 +40,11 @@ h1 {
   margin: 0;
   padding: 0;
 }
+h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+}
 
 input,
 button {
@@ -53,12 +62,14 @@ button:focus {
   background-color: #555;
 }
 
-img,
+#thumb-carrito,
 .basket-module,
 .basket-labels,
 .basket-product {
-  width: 100%;
+  width: 80%;
 }
+
+
 
 input,
 button,
@@ -98,7 +109,6 @@ main {
 
 .basket,
 aside {
-  padding: 0 1rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -134,17 +144,10 @@ label {
   border: 1px solid #999;
 }
 
-.promo-code-cta {
-  border-radius: 4px;
-  font-size: 0.625rem;
-  margin-left: 0.625rem;
-  padding: 0.6875rem 1.25rem 0.625rem;
-}
 
 .basket-labels {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  margin-top: 1.625rem;
 }
 
 ul {
@@ -231,7 +234,7 @@ li.subtotal:before {
   background-color: #ccc;
   border: 1px solid #aaa;
   border-radius: 4px;
-  font-size: 0.625rem;
+  font-size: 1.2rem;
   padding: 2px;
   width: 3.75rem;
 }
@@ -244,10 +247,8 @@ aside {
 
 .summary {
   background-color: #eee;
-  border: 1px solid #aaa;
   padding: 1rem;
-  position: fixed;
-  width: 250px;
+  width: 400px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -320,7 +321,7 @@ aside {
 .checkout-cta {
   display: block;
   float: none;
-  font-size: 0.75rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   padding: 0.625rem 0;

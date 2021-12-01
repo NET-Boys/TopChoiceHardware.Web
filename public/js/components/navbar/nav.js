@@ -1,7 +1,7 @@
 export const NavSinLogin = () =>`
   <nav class="navbar navbar-expand-lg navbar-dark bgcolor " id="navegador">
     <div class="container-fluid">
-        <a class="navbar-brand logo-empresa" href="../../"><img src="../img/logo.png" height="80" alt="" loading="lazy" style="margin-top: -1px;"/></a>
+        <a id="imagen-logo" class="navbar-brand logo-empresa" href="../../"><img  src="../img/logo.png" height="80" alt="" loading="lazy" style="margin-top: -1px;"/></a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="botonToggle">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,7 +18,7 @@ export const NavSinLogin = () =>`
 export const NavConLogin = (email) =>`
 <nav class="navbar navbar-expand-lg navbar-dark bgcolor " id="navegador">
     <div class="container-fluid">
-        <a class="navbar-brand logo-empresa" href="../../"><img src="../img/logo.png" height="80" alt="" loading="lazy" style="margin-top: -1px;"/></a>
+        <a id="imagen-logo" class="navbar-brand logo-empresa" href="../../"><img  src="../img/logo.png" height="80" alt="" loading="lazy" style="margin-top: -1px;"/></a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="botonToggle">
             <span class="navbar-toggler-icon"></span>
         </button>

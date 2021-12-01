@@ -33,7 +33,7 @@ header{
 #root{
     margin-left: 20%;
     margin-right: 20%;
-    margin-bottom: 16%;
+    margin-bottom: 0%;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }

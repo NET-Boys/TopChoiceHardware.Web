@@ -3,6 +3,7 @@ import { CardProducto } from "../components/card.js"
 import { Footer } from "../components/footer.js";
 import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
 import { getProductos, getCategoria } from "../services/fetchServices.js";
+import { PopUpAlgoSalioMal,PopUpSatisfactorio,PopUpErrorStock } from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -22,9 +23,14 @@ const NavbarLogin =(email) =>{
     let _root = document.getElementById("navigator");
     _root.innerHTML+= NavConLogin(email);
 }
-
+const PopUpRender=()=>{
+    let _popupRoot = document.getElementById("popups");
+    _popupRoot.innerHTML+=PopUpSatisfactorio();
+    _popupRoot.innerHTML+=PopUpAlgoSalioMal();
+    _popupRoot.innerHTML+=PopUpErrorStock();
+}
 export const IndexRender = ()=> {
-    
+    PopUpRender();
     FooterRender();
     getProductos(ProductosRender);
     if(window.localStorage.getItem("Top Choise User")){

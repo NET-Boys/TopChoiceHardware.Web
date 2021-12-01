@@ -51,5 +51,5 @@ export const ProductoSlider = (img) =>`
 `
 
 export const ProductoBotonAgregar = (productoId,stock) =>`
-<a href="#" class="round-black-btn" onclick='addToCart(${productoId},${stock})'>Añadir al carrito</a>
+<a class="round-black-btn" onclick='addToCart(${productoId},${stock})'>Añadir al carrito</a>
 `

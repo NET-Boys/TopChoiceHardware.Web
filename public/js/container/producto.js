@@ -3,6 +3,7 @@ import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { getProductoById } from "../services/fetchServices.js";
 import { ProductoTitulo, ProductoPrecio,ProductoDescripcion, ProductoLink, ProductoSlider, ProductoBotonAgregar} from "../components/product.js";
+import { PopUpSatisfactorio, PopUpAlgoSalioMal, PopUpErrorStock} from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -15,6 +16,12 @@ const NavbarLogin =(email) =>{
 const FooterRender =() =>{
     let _root = document.getElementById("footer-distributed");
     _root.innerHTML+= Footer();
+}
+const PopUpRender=()=>{
+    let _popupRoot = document.getElementById("popups");
+    _popupRoot.innerHTML+=PopUpSatisfactorio();
+    _popupRoot.innerHTML+=PopUpAlgoSalioMal();
+    _popupRoot.innerHTML+=PopUpErrorStock();
 }
 const ProductRender =(json) =>{
     let _titulo = document.getElementById("producto-titulo");
@@ -125,6 +132,7 @@ function renderSlider(){
 }
 
 export const ProductoRender = (productId)=> {
+    PopUpRender();
     if(window.localStorage.getItem("Top Choise User")){
         console.log(window.localStorage.getItem("Top Choise User"))
         var decoded = jwtDecode(window.localStorage.getItem("Top Choise User"));

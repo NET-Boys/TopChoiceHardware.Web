@@ -12,7 +12,6 @@ function agregarAlCarrito(productoId,stock,cantidad){
         else{
             if(EstaAgregado(productoId,stock))
             {
-                alert('El producto esta agregado')
                 IncrementarCantidad(productoId,stock,cantidad)
             }
             else{
@@ -24,7 +23,6 @@ function agregarAlCarrito(productoId,stock,cantidad){
 
 function EstaAgregado(productoId,stock){
     let products = [];
-    debugger
     if(localStorage.getItem('order')){
         products = JSON.parse(localStorage.getItem('order'));
     }
@@ -45,10 +43,11 @@ function Agregar(productoId,stock,cantidad){
     if (stock>=cantidad) {
         productos.push(producto)
         localStorage.setItem('order', JSON.stringify(productos));
-        alert("Se agrego el producto correctamente");
+
+        window.location.href='#popup1'
     }
     else{
-        alert("No hay capacidad para agregar el producto");
+        window.location.href='#popup2'
     }
 }
 
@@ -65,9 +64,11 @@ function IncrementarCantidad(productoId,stock,cantidad){
         producto.cantidad+=cantidad
         productos.push(producto)
         localStorage.setItem('order', JSON.stringify(productos));
-        alert("Se han agregado " + cantidad+" producto/s al carrito.")
+        window.location.href='#popup1'
     }
     else{
-        alert("No hay stock para lo solicitado, lo sentimos")
+        window.location.href='#popup2'
     }
 }
+
+

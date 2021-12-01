@@ -30,6 +30,36 @@ export const getProductoById =(productId,callback)=>{
         callback(body);
     })
 }
+export const getProductsInCart=(json,callback)=>{
+    let productos=[];
+    let productoTemporal={};
+    fetch(`${UrlApiProducts}/products`,{
+        method: 'GET'
+    })
+    .then((httpResponse)=>{
+        if(httpResponse.ok)
+            return httpResponse.json()
+    })
+    .then(body => {
+        json.forEach(productoCarrito => {
+            body.forEach(bodyProduct => {
+                if (productoCarrito.productId==bodyProduct.productId) {
+                    debugger
+                    productoTemporal.productId=bodyProduct.productId
+                    productoTemporal.name=bodyProduct.productName
+                    productoTemporal.cantidad=productoCarrito.cantidad
+                    productoTemporal.imagen=bodyProduct.image
+                    productoTemporal.stock=bodyProduct.unitsInStock
+                    productoTemporal.price=bodyProduct.unitPrice
+                    productos.push(productoTemporal)
+                    productoTemporal={}
+                }
+            });
+        });
+        callback(productos);
+    })
+
+}
 
 export const getCategoria = (id,callback)=>{
     fetch(`${UrlApiProducts}/category/${id}`,{

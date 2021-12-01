@@ -1,3 +1,4 @@
+export const AlgoritmoCarrito = () =>{
 /* Set values + misc */
 var promoCode;
 var promoPrice;
@@ -122,4 +123,6 @@ function removeItem(removeButton) {
     recalculateCart();
     updateSumItems();
   });
+}
+
 }

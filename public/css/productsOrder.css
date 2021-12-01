@@ -2,6 +2,19 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
+html,
+html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+body {
+  background-color: #fff;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+  margin: 0 auto;
+}
 
 a {
   border: 0 none;
@@ -40,7 +53,7 @@ button:focus {
   background-color: #555;
 }
 
-
+img,
 .basket-module,
 .basket-labels,
 .basket-product {
@@ -67,7 +80,7 @@ button,
 .subtotal-value:before,
 .total-value:before,
 .promo-value:before {
-  content: 'ARS$';
+  content: 'ARS $';
 }
 
 .hide {

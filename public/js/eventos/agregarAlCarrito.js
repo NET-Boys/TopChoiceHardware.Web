@@ -4,6 +4,9 @@ function addToCart(productoId,stock){
 }
 
 function agregarAlCarrito(productoId,stock,cantidad){
+    if (!window.localStorage.getItem("Top Choise Use")) {
+        window.location.href='#popup4'
+    }
     let almacenamiento = localStorage.getItem('order')
     if(almacenamiento!=null){
         if (almacenamiento=="[]") {

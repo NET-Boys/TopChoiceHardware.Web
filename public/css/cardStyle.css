@@ -56,6 +56,13 @@ a
     color: #8100d6;
     text-shadow: 2px 2px 5px #ffffff;
 }
+#boton-mini-carrito{
+    color: rgb(194, 194, 194);
+}
+#boton-mini-carrito:hover{
+    color: #8100d6;
+    cursor: pointer;
+}
 
 .titulo-descripcion{
     height: 70px;
@@ -108,6 +115,9 @@ a
     font-size: 17px;
 }
 
+.product-links a{
+    color:grey
+}
 .product-links a:hover {
     color: #8100d6;
 }

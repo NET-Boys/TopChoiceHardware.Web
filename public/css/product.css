@@ -1,6 +1,17 @@
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
 #thumb{
 	margin-top: 2em;
 }
+#product-box{
+	margin-top: 50px;
+}
+.owl-carousel,.owl-carousel .owl-item{
+	-webkit-tap-highlight-color:transparent; 
+	position:unset !important  ;}
+
 .pd-wrap {
 	padding: 0px 0;
 	font-family: 'Poppins', sans-serif;
@@ -127,6 +138,15 @@
     color:#ccc;
 	margin-bottom: 0;
 	line-height: 21px;
+}
+#agregar-al-carrito a{
+	cursor: pointer;
+
+	color: white;
+}
+#agregar-al-carrito a:hover{
+	color:#212529;
+
 }
 .rate:not(:checked) > label:before {
     content: '\2605';

@@ -2,6 +2,7 @@ body{
     height:100%;
     display: inline-flexbox;
     flex-direction: column-reverse;
+    font-family: 'Poppins', sans-serif !important;
     align-items: flex-start;
     justify-content: left;
     background-color:rgb(163, 162, 162);

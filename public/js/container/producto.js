@@ -3,7 +3,7 @@ import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { getProductoById } from "../services/fetchServices.js";
 import { ProductoTitulo, ProductoPrecio,ProductoDescripcion, ProductoLink, ProductoSlider, ProductoBotonAgregar} from "../components/product.js";
-import { PopUpSatisfactorio, PopUpAlgoSalioMal, PopUpErrorStock} from "../components/popups.js";
+import { PopUpSatisfactorio, PopUpAlgoSalioMal, PopUpErrorStock,PopUpLoginNecesario} from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -22,6 +22,7 @@ const PopUpRender=()=>{
     _popupRoot.innerHTML+=PopUpSatisfactorio();
     _popupRoot.innerHTML+=PopUpAlgoSalioMal();
     _popupRoot.innerHTML+=PopUpErrorStock();
+    _popupRoot.innerHTML+=PopUpLoginNecesario();
 }
 const ProductRender =(json) =>{
     let _titulo = document.getElementById("producto-titulo");

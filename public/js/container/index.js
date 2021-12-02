@@ -3,7 +3,7 @@ import { CardProducto } from "../components/card.js"
 import { Footer } from "../components/footer.js";
 import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
 import { getProductos, getCategoria } from "../services/fetchServices.js";
-import { PopUpAlgoSalioMal,PopUpSatisfactorio,PopUpErrorStock } from "../components/popups.js";
+import { PopUpAlgoSalioMal,PopUpSatisfactorio,PopUpErrorStock,PopUpLoginNecesario } from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -28,6 +28,7 @@ const PopUpRender=()=>{
     _popupRoot.innerHTML+=PopUpSatisfactorio();
     _popupRoot.innerHTML+=PopUpAlgoSalioMal();
     _popupRoot.innerHTML+=PopUpErrorStock();
+    _popupRoot.innerHTML+=PopUpLoginNecesario();
 }
 export const IndexRender = ()=> {
     PopUpRender();

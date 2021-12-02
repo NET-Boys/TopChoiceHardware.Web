@@ -21,7 +21,7 @@ export const PopUpErrorStock = () =>`
     </div>`
 
 export const PopUpAlgoSalioMal = () =>`
-<div id="popup3" class="overlay">
+  <div id="popup3" class="overlay">
         <div class="popup">
         <h2>Algo Salio mal</h2>
         <a class="close" href="#">&times;</a>
@@ -31,3 +31,19 @@ export const PopUpAlgoSalioMal = () =>`
         </div>
     </div>`
     
+
+export const PopUpLoginNecesario = () =>`
+  <div id="popup4" class="overlay">
+        <div class="popup">
+        <div class="content modal-header">
+        <h3>Advertencia</h3>
+        </div>
+        <a class="close" href="#">&times;</a>
+        <div class="content modal-body">
+            Debe ingresar su cuenta para iniciar un carrito
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark active" onclick=window.location.href="../../login"> Login</button>
+        </div>
+        </div>
+    </div>`

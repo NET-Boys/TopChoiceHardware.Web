@@ -82,3 +82,17 @@ function EliminarProducto(productId){
     }
     localStorage.setItem('order', JSON.stringify(productos));
 }
+
+function ActualizarStock(productId,cantidad){
+    let productos=JSON.parse(localStorage.getItem('order'));
+    let producto=[];
+    for (var i = 0; i < Object.keys(productos).length; i++) {
+        if (productos[i].productId==productId) {
+            producto=productos[i];
+            productos.splice(i,1);
+        }
+    }
+    producto.cantidad=cantidad
+    productos.push(producto)
+    localStorage.setItem('order', JSON.stringify(productos));
+}

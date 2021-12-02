@@ -4,7 +4,7 @@ import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
 import { CarritoProducto, CarritoAside } from "../components/carrito.js";
 import { getDomicilio, getProductsInCart } from "../services/fetchServices.js";
 import { AlgoritmoCarrito } from "../../lib/js/orderAlgorithm.js";
-
+import { PopUpCompra } from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -18,8 +18,11 @@ const NavbarLogin =(email) =>{
     let _root = document.getElementById("navigator");
     _root.innerHTML+= NavConLogin(email);
 }
+const PopUpRender=()=>{
+    let _popupRoot = document.getElementById("popups");
+    _popupRoot.innerHTML+=PopUpCompra();
+}
 const RenderCarrito=(json)=>{
-    
     let _productos = document.getElementById("productos");
     let _carritoAside = document.getElementById("orden-aside")
     let montoTotal=0;
@@ -32,6 +35,7 @@ const RenderCarrito=(json)=>{
     RealizarOrdenNueva()
     //RealizarLaOrden()
 }
+
 function RealizarOrdenNueva (){
     document.getElementById("boton-compra").onclick= function(){
         debugger
@@ -53,6 +57,7 @@ const FinalizarOrden=(json)=>{
 }
 export const OrdenRender = ()=> {
     FooterRender();
+    PopUpRender();
     if(window.localStorage.getItem("Top Choise User")){
         console.log(window.localStorage.getItem("Top Choise User"))
         var decoded = jwtDecode(window.localStorage.getItem("Top Choise User"));

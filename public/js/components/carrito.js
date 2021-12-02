@@ -10,7 +10,7 @@ export const CarritoProducto = (productId,imagen,name,price,cantidad,stock) =>`
           </div>
           <div id="price" class="price">${price}</div>
           <div class="quantity">
-            <input type="number" value="${cantidad}" min="1" max="${stock}"class="quantity-field">
+            <input id="input${productId}" type="number" value="${cantidad}" min="1" max="${stock}"class="quantity-field" onclick='ActualizarStock(${productId},this.value)'>
           </div>
           <div class="subtotal">${price*cantidad}</div>
           <div class="remove">

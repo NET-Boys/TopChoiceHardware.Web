@@ -112,6 +112,7 @@ export const getMediosDePago =(callback)=>{
         callback(body);
     })
 }
+
 export const getDomicilio =(usuarioId,metodoDePagoId,monto,email,callback)=>{
     fetch(`${UrlApiAddress}/Domicilio/${usuarioId}`,{
         method: 'GET'
@@ -121,10 +122,33 @@ export const getDomicilio =(usuarioId,metodoDePagoId,monto,email,callback)=>{
             return httpResponse.json()
     })
     .then(body => {
-        debugger
-        generarOrden(usuarioId,metodoDePagoId,body[0],monto,email,callback)
+        EliminarProductos(usuarioId,metodoDePagoId,body[0],monto,email,callback)
     })
 }
+
+export const EliminarProductos =(usuarioId,metodoDePagoId,direccion,monto,email,callback)=>{
+    let jsonBody = JSON.parse(window.localStorage.getItem("order"));
+    debugger
+    (async () => {
+        const rawResponse = await fetch(`${UrlApiProducts}/products/order`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(jsonBody)
+        })
+        .then((httpResponse)=>{
+            if(httpResponse.ok)
+                alert('Los productos se han eliminado')
+                return httpResponse.json()
+        })
+        .then(body => {
+            generarOrden(usuarioId,metodoDePagoId,direccion,monto,email,callback)
+        })
+      })();
+}
+
 export const generarOrden =(usuarioId,metodoDePagoId,direccion,monto,email,callback)=>{
     debugger
     let jsonBody = {
@@ -146,6 +170,7 @@ export const generarOrden =(usuarioId,metodoDePagoId,direccion,monto,email,callb
         .then((httpResponse)=>{
             if(httpResponse.ok)
                 alert('Gracias por su compra')
+                window.location.href='#popup-gracias'
                 return httpResponse.json()
         })
         .then(body => {

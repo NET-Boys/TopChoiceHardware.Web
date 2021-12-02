@@ -58,3 +58,19 @@ export const PopUpErrorLogin = () =>`
             </div>
           </div>
         </div>`
+
+export const PopUpCompra = () =>`
+  <div id="popup-gracias" class="overlay">
+    <div class="popup">
+      <div class="content modal-header">
+      <h3>Su ha registrado la orden correctamente</h3>
+      </div>
+      <a class="close" href="#">&times;</a>
+      <div class="content modal-body">
+          Por favor revise su casilla de e-mail para continuar con la operación
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark active" onclick=window.location.href="../../login"> Login</button>
+      </div>
+    </div>
+  </div>`

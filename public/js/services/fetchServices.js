@@ -2,7 +2,6 @@ const UrlApiUsers = "https://localhost:44355/api/usuario"
 const UrlApiAddress = "https://localhost:44356/api"
 const UrlApiProducts = "https://localhost:44357/api"
 const UrlApiOrders = "https://localhost:44358/api"
-
 const urlBaseLocalidades ="https://localhost:44356/api/Localidades"
 
 export const getProductos = (callback)=>{
@@ -74,7 +73,6 @@ export const getCategoria = (id,callback)=>{
 }
 
 export const getProvincias = (callback)=>{
-    
     let url = `${UrlApiAddress}/Provincias`
     debugger
     fetch(url,{
@@ -114,4 +112,44 @@ export const getMediosDePago =(callback)=>{
         callback(body);
     })
 }
-
+export const getDomicilio =(usuarioId,metodoDePagoId,monto,email,callback)=>{
+    fetch(`${UrlApiAddress}/Domicilio/${usuarioId}`,{
+        method: 'GET'
+    })
+    .then((httpResponse)=>{
+        if(httpResponse.ok)
+            return httpResponse.json()
+    })
+    .then(body => {
+        debugger
+        generarOrden(usuarioId,metodoDePagoId,body[0],monto,email,callback)
+    })
+}
+export const generarOrden =(usuarioId,metodoDePagoId,direccion,monto,email,callback)=>{
+    debugger
+    let jsonBody = {
+        "userId": usuarioId,
+        "paymentMethodId": metodoDePagoId,
+        "addressId": direccion.addressId,
+        "total": monto,
+        "email": email
+    };
+    (async () => {
+        const rawResponse = await fetch(`${UrlApiOrders}/Order`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(jsonBody)
+        })
+        .then((httpResponse)=>{
+            if(httpResponse.ok)
+                alert('Gracias por su compra')
+                return httpResponse.json()
+        })
+        .then(body => {
+           callback(body)
+        })
+      })();
+}

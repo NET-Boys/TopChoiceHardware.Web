@@ -30,7 +30,7 @@ export const CarritoAside = (montoTotal) =>`
             </div>
           </div>
           <div class="summary-delivery">
-            <select name="delivery-collection" class="summary-delivery-selection">
+            <select id="select-metodo" name="delivery-collection" class="summary-delivery-selection">
                 <option value="1" selected="selected">Efectivo</option>
                <option value="2">Transferencia</option>
                <option value="3">Debito</option>
@@ -39,9 +39,9 @@ export const CarritoAside = (montoTotal) =>`
           </div>
           <div class="summary-total">
             <div class="total-title">Total</div>
-            <div class="total-value final-value" id="basket-total">${montoTotal}</div>
+            <div id="monto-final" class="total-value final-value" id="basket-total">${montoTotal}</div>
           </div>
           <div class="summary-checkout">
-            <button class="checkout-cta">Comprar</button>
+            <button id="boton-compra" class="checkout-cta" onclick="RealizarLaOrden()">Comprar</button>
           </div>
         </div>`

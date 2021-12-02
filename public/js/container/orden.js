@@ -2,8 +2,9 @@ import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { Footer } from "../components/footer.js";
 import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
 import { CarritoProducto, CarritoAside } from "../components/carrito.js";
-import { getProductsInCart } from "../services/fetchServices.js";
+import { getDomicilio, getProductsInCart } from "../services/fetchServices.js";
 import { AlgoritmoCarrito } from "../../lib/js/orderAlgorithm.js";
+
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -28,6 +29,26 @@ const RenderCarrito=(json)=>{
     });
     _carritoAside.innerHTML+=CarritoAside(montoTotal)
     AlgoritmoCarrito()
+    RealizarOrdenNueva()
+    //RealizarLaOrden()
+}
+function RealizarOrdenNueva (){
+    document.getElementById("boton-compra").onclick= function(){
+        debugger
+        let monto=document.getElementById("monto-final").innerText
+        let select= document.getElementById("select-metodo");
+        let medioDePago=select.options[select.selectedIndex].value
+        let token=window.localStorage.getItem("Top Choise User")
+        var decoded = jwtDecode(token);
+        let usuarioId=decoded.payload.UserId
+        let email=decoded.payload.email
+        debugger
+        RealizarOrden(usuarioId,medioDePago,monto,email)
+        debugger
+    }
+}
+const FinalizarOrden=(json)=>{
+    
     
 }
 export const OrdenRender = ()=> {
@@ -49,6 +70,8 @@ export const OrdenRender = ()=> {
         console.log('No hay productos en el carrito');
     }
     getProductsInCart(JSON.parse(window.localStorage.getItem("order")),RenderCarrito)
-
+}
+export const RealizarOrden =(usuarioId, metodoDePago, monto, email)=>{
+    getDomicilio(usuarioId,metodoDePago,monto,email,FinalizarOrden)
 }
 

@@ -1,7 +1,7 @@
 const UrlApiUsers = "https://localhost:44355/api/usuario"
 const UrlApiAddress = "https://localhost:44356/api"
 const UrlApiProducts = "https://localhost:44357/api"
-const UrlApiOrders = "https://localhost:44358/api/Factura"
+const UrlApiOrders = "https://localhost:44358/api"
 
 const urlBaseLocalidades ="https://localhost:44356/api/Localidades"
 
@@ -102,5 +102,16 @@ export const getLocalidades = (provinciaId,callback) =>{
     })
 }
 
-
+export const getMediosDePago =(callback)=>{
+    fetch(`${UrlApiOrders}/MetodoPago`,{
+        method: 'GET'
+    })
+    .then((httpResponse)=>{
+        if(httpResponse.ok)
+            return httpResponse.json()
+    })
+    .then(body => {
+        callback(body);
+    })
+}
 

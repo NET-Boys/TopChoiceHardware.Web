@@ -3,7 +3,6 @@ const UrlUser = "https://localhost:44355/api/usuario"
 const UrlAdress = "https://localhost:44356/api/Domicilio"
 
 function registerUser() {
-  
     let userPostBody = {
         name : document.getElementById("name").value,
         username : document.getElementById("userName").value,
@@ -29,6 +28,7 @@ function registerUser() {
         if (typeof(content.userId) != "undefined") {
           registerAdress(content.userId)
           alert("Se ha generado el usuario!")
+          window.location.href="../login"
         }
         else{
           alert(content.message)

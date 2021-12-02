@@ -47,3 +47,14 @@ export const PopUpLoginNecesario = () =>`
         </div>
         </div>
     </div>`
+
+export const PopUpErrorLogin = () =>`
+    <div id="popupErrorLogin" class="overlay">
+          <div class="popup">
+            <h3>¡Ups!</h3>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              Usuario o contraseña incorrecta
+            </div>
+          </div>
+        </div>`

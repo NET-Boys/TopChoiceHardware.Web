@@ -3,6 +3,7 @@ import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { LoginBox } from "../components/loginBox.js";
 import { LoginUser } from "../services/login/login.js";
+import { PopUpErrorLogin } from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -24,10 +25,14 @@ const LoginExitosoRender =(json)=>{
     console.log("Email: "+decoded.payload.email +"User Id: " +decoded.payload.UserId)
     window.location.href = "../"
 }
-
+const PopUpRender=()=>{
+    let _popupRoot = document.getElementById("popups");
+    _popupRoot.innerHTML+=PopUpErrorLogin();
+}
 export const LoginRender = ()=> {
     NavRender();
     FooterRender();
+    PopUpRender();
 }
 export const LoginExitoso =() =>{
     LoginUser(LoginExitosoRender);

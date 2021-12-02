@@ -12,7 +12,7 @@ export const CarritoProducto = (productId,imagen,name,price,cantidad,stock) =>`
           <div class="quantity">
             <input type="number" value="${cantidad}" min="1" max="${stock}"class="quantity-field">
           </div>
-          <div class="subtotal">${price}</div>
+          <div class="subtotal">${price*cantidad}</div>
           <div class="remove">
             <button onclick="EliminarProducto(${productId})">Eliminar</button>
           </div>
@@ -20,7 +20,7 @@ export const CarritoProducto = (productId,imagen,name,price,cantidad,stock) =>`
 `
 export const CarritoAside = (montoTotal) =>`
 <div class="summary">
-          <div class="summary-total-items"><span class="total-items"></span> Items en tu carrito</div>
+          <div class="summary-total-items"><h6><span class="total-items"></span> Items en tu carrito</h6></div>
           <div class="summary-subtotal">
             <div class="subtotal-title">Subtotal</div>
             <div class="subtotal-value final-value" id="basket-subtotal">${montoTotal}</div>
@@ -31,10 +31,10 @@ export const CarritoAside = (montoTotal) =>`
           </div>
           <div class="summary-delivery">
             <select name="delivery-collection" class="summary-delivery-selection">
-                <option value="0" selected="selected">Efectivo</option>
-               <option value="collection">Transferencia</option>
-               <option value="first-class">Debito</option>
-               <option value="second-class">Credito</option>
+                <option value="1" selected="selected">Efectivo</option>
+               <option value="2">Transferencia</option>
+               <option value="3">Debito</option>
+               <option value="4">Credito</option>
             </select>
           </div>
           <div class="summary-total">

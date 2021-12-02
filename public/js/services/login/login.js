@@ -14,10 +14,9 @@ export const LoginUser=(callback) =>{
         });
         const content = await rawResponse.json();
         if(content.status === "Success"){
-            alert("Ha iniciado sesión exitosamente");
             LoginHandler(content,callback)
         }else{
-            alert("Ha ocurrido un problema, inténtelo nuevamente");
+          window.location.href='#popupErrorLogin'
         }
         
       })();

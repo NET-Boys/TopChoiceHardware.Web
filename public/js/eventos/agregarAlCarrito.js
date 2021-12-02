@@ -89,10 +89,9 @@ function ActualizarStock(productId,cantidad){
     for (var i = 0; i < Object.keys(productos).length; i++) {
         if (productos[i].productId==productId) {
             producto=productos[i];
-            productos.splice(i,1);
+            productos[i].cantidad=cantidad
         }
     }
-    producto.cantidad=cantidad
-    productos.push(producto)
+    
     localStorage.setItem('order', JSON.stringify(productos));
 }

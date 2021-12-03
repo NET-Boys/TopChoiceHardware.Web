@@ -10,6 +10,31 @@ body{
     padding-bottom: 210px;
     min-height:100vh;
 }
+.card-title{
+    height: 80px;
+}
+.card-body a{
+    color: rgb(0, 0, 0) !important;
+    text-decoration: none;
+}
+  .card-body a:hover{
+color: #8100d6 !important;
+transition: .3s;
+
+
+}
+.carta-oferta{
+    height: 390px;
+    border-radius: 0rem !important;
+    padding: 5px;
+    margin: 7px 7px auto;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.041);
+}
+.carta-oferta:hover{
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.8); 
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.8);
+    transition: 0.3s;
+}
 button{
     background-color: #063780; 
     color: rgb(248, 144, 74); 

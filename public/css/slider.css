@@ -1,0 +1,35 @@
+.img-fluid {
+    max-width: 56%;
+    height: auto;
+    align-content: center;
+    text-align: match-parent;
+    margin-left: 5em;
+}
+
+.col-6{
+    text-align: end;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3f129f;
+    border-color: #3f129f;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #5728dd;
+    border-color: #5728dd;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #5728dd;
+    border-color: #5728dd;
+    box-shadow: 0 0 0 .25rem rgba(181, 22, 253, 0.5);
+}
+
+#ofertas{
+    text-decoration: underline;
+    font-weight: bold;
+}

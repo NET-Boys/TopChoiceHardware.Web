@@ -1,5 +1,5 @@
 import { jwtDecode } from "../../lib/js/jwt-decode.js";
-import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
+import {  NavConLoginSinBusqueda,NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { getProductoById } from "../services/fetchServices.js";
 import { ProductoTitulo, ProductoPrecio,ProductoDescripcion, ProductoLink, ProductoSlider, ProductoBotonAgregar} from "../components/product.js";
@@ -7,11 +7,11 @@ import { PopUpSatisfactorio, PopUpAlgoSalioMal, PopUpErrorStock,PopUpLoginNecesa
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= NavSinLogin();
+    _root.innerHTML+= NavSinLoginSinBusqueda();
 }
 const NavbarLogin =(email) =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= NavConLogin(email);
+    _root.innerHTML+= NavConLoginSinBusqueda(email);
 }
 const FooterRender =() =>{
     let _root = document.getElementById("footer-distributed");

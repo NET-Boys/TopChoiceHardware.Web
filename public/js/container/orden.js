@@ -1,6 +1,6 @@
 import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { Footer } from "../components/footer.js";
-import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
+import { NavSinLogin,NavConLoginSinBusqueda,NavPrueba } from "../components/navbar/nav.js"
 import { CarritoProducto, CarritoAside } from "../components/carrito.js";
 import { getDomicilio, getProductsInCart } from "../services/fetchServices.js";
 import { AlgoritmoCarrito } from "../../lib/js/orderAlgorithm.js";
@@ -16,7 +16,7 @@ const FooterRender =() =>{
 }
 const NavbarLogin =(email) =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= NavConLogin(email);
+    _root.innerHTML+= NavConLoginSinBusqueda(email);
 }
 const PopUpRender=()=>{
     let _popupRoot = document.getElementById("popups");

@@ -89,3 +89,13 @@ export const PopUpCompraPrevia = () =>`
     </div>
   </div>`
 
+  export const PopUpSinResultado = () =>`
+  <div id="popupSinResultado" class="overlay">
+          <div class="popup">
+            <h3>¡Ups!</h3>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              Su busqueda no produjo resultados
+            </div>
+          </div>
+        </div>`

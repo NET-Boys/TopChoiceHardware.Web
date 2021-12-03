@@ -1,11 +1,11 @@
 import { SelectProvincia,AddOptions } from "../components/selectProvincia.js"
 import { getProvincias, getLocalidades } from "../services/fetchServices.js";
-import { NavSinLogin, NavConLogin } from "../components/navbar/nav.js";
+import { NavSinLogin, NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= NavSinLogin();
+    _root.innerHTML+= NavSinLoginSinBusqueda();
 }
 const FooterRender =() =>{
     let _root = document.getElementById("footer-distributed");
@@ -23,6 +23,7 @@ const LimpiarLocalidades =() =>{
     document.querySelectorAll('#localidades-select option').forEach(option => option.remove());
     _root.appendChild(AddOptions("00", "Seleccione una localidad"));
 }
+
 const RenderLocalidades = (json) =>{
     let _root = document.getElementById("localidades-select");
     json.forEach(localidad => {

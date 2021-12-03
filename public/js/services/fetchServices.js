@@ -56,7 +56,18 @@ export const getProductsInCart=(json,callback)=>{
         });
         callback(productos);
     })
-
+}
+export const getProductosByFilter = (order,categoryId,productName,callback) => {
+    fetch(`${UrlApiProducts}/products?order=${order}&titulo=${productName}&categoryId=${categoryId}`, {
+        method: 'GET'
+    })
+        .then((httpResponse) => {
+            if (httpResponse.ok)
+                return httpResponse.json()
+        })
+        .then(body => {
+            callback(body);
+        })
 }
 
 export const getCategoria = (id,callback)=>{

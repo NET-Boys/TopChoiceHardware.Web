@@ -1,5 +1,5 @@
 import {jwtDecode} from "../../lib/js/jwt-decode.js";
-import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js";
+import { NavSinLoginSinBusqueda,NavConLogin } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { LoginBox } from "../components/loginBox.js";
 import { LoginUser } from "../services/login/login.js";
@@ -7,7 +7,7 @@ import { PopUpErrorLogin } from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
-    _root.innerHTML+= NavSinLogin();
+    _root.innerHTML+= NavSinLoginSinBusqueda();
 }
 const FooterRender =() =>{
     let _root = document.getElementById("footer-distributed");

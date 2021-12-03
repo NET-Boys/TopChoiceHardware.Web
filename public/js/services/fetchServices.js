@@ -85,7 +85,6 @@ export const getCategoria = (id,callback)=>{
 
 export const getProvincias = (callback)=>{
     let url = `${UrlApiAddress}/Provincias`
-    debugger
     fetch(url,{
         method: 'GET'
     })
@@ -139,7 +138,6 @@ export const getDomicilio =(usuarioId,metodoDePagoId,monto,email,callback)=>{
 
 export const EliminarProductos =(usuarioId,metodoDePagoId,direccion,monto,email,callback)=>{
     let jsonBody = JSON.parse(window.localStorage.getItem("order"));
-    debugger
     (async () => {
         const rawResponse = await fetch(`${UrlApiProducts}/products/order`, {
           method: 'POST',
@@ -160,7 +158,6 @@ export const EliminarProductos =(usuarioId,metodoDePagoId,direccion,monto,email,
 }
 
 export const generarOrden =(usuarioId,metodoDePagoId,direccion,monto,email,callback)=>{
-    debugger
     let jsonBody = {
         "userId": usuarioId,
         "paymentMethodId": metodoDePagoId,

@@ -18,149 +18,85 @@
     </header>
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div id="dimension-registro" class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="card bg-dark text-white" style="border-radius: 1rem">
             <div class="card-body text-center">
               <div id="form-box">
                 <h2 class="fw-bold mb-2 text-uppercase">Registro</h2>
                 <p class="text-white-50 mb-5">Ingrese sus datos</p>
                 <form id = "formulario"class="row g-3 needs-validation" novalidate>
-                  <div class="form-group">
-                    <!-- Full Name -->
-                    <label for="name" class="form-label">Nombre Completo</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      name="full_name"
-                      placeholder="Juan Perez"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <!-- USER -->
-                    <label for="userName" class="form-label">Usuario</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="userName"
-                      name="full_name"
-                      placeholder="juan2008"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <!-- DNI -->
-                    <label for="DNI" class="control-label">DNI</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="DNI"
-                      name="full_name"
-                      placeholder="12345678"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <!-- Email -->
-                    <label for="email" class="control-label">Email</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="email"
-                      name="full_name"
-                      placeholder="jperez@mail.com"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <!-- Pass -->
-                    <label for="password" class="control-label"
-                      >Contraseña</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="password"
-                      name="full_name"
-                      placeholder="Password"
-                      required
-                    />
-                  </div>
+                  <div id="orden-formulario">
+                    <div class="form-group">
+                      <!-- Full Name -->
+                      <label for="name" class="form-label">Nombre Completo*</label>
+                      <input type="text" class="form-control"id="name" name="full_name"placeholder="Juan Perez"required/>
+                    </div>
+                    <div class="form-group">
+                      <!-- USER -->
+                      <label for="userName" class="form-label">Usuario*</label>
+                      <input type="text"class="form-control"id="userName"name="full_name"placeholder="juan2008"required/>
+                    </div>
+                    <div class="form-group">
+                      <!-- DNI -->
+                      <label for="DNI" class="control-label">DNI*</label>
+                      <input type="text"class="form-control"id="DNI"name="full_name"placeholder="12345678"required/>
+                    </div>
+                    <div class="form-group">
+                      <!-- Email -->
+                      <label for="email" class="control-label">Email*</label>
+                      <input type="text"class="form-control"id="email" name="full_name"placeholder="jperez@mail.com"required/>
+                    </div>
+                    <div class="form-group">
+                      <!-- Pass -->
+                      <label for="password" class="control-label">Contraseña*</label>
+                      <input type="password" class="form-control" id="password" name="full_name" placeholder="Password" required/>
+                    </div>
 
-                  <div class="form-group">
-                    <!-- Provincias -->
-                    <label for="provincias-select" class="control-label"
-                      >Provincia</label
-                    >
-                    <select class="form-control" id="provincias-select">
-                      <option selected disabled value="00">
-                        Seleccione una provincia
-                      </option>
-                    </select>
-                  </div>
+                    <div class="form-group">
+                      <!-- Provincias -->
+                      <label for="provincias-select" class="control-label">Provincia*</label>
+                      <select class="form-control" id="provincias-select">
+                        <option selected value="00">
+                          Seleccione una provincia
+                        </option>
+                      </select>
+                    </div>
 
-                  <div class="form-group">
-                    <!-- Localidades -->
-                    <label for="localidades-select" class="control-label"
-                      >Localidad</label
-                    >
-                    <select class="form-control" id="localidades-select">
-                      <option selected disabled value="00">
-                        Seleccione una localidad
-                      </option>
-                    </select>
-                  </div>
+                    <div class="form-group">
+                      <!-- Localidades -->
+                      <label for="localidades-select" class="control-label">Localidad*</label>
+                      <select class="form-control" id="localidades-select">
+                        <option selected disabled value="00">
+                          Seleccione una localidad
+                        </option>
+                      </select>
+                    </div>
 
-                  <div class="form-group">
-                    <!-- Street -->
-                    <label for="street" class="control-label">Calle</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="street"
-                      placeholder="Av. Calchaquí"
-                      required
-                    />
-                  </div>
+                    <div class="form-group">
+                      <!-- Street -->
+                      <label for="street" class="control-label">Calle*</label>
+                      <input type="text" class="form-control" id="street" placeholder="Av. Calchaquí" required/>
+                    </div>
 
-                  <div class="form-group">
-                    <!-- Number -->
-                    <label for="street_number" class="control-label"
-                      >Numero</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="street_number"
-                      placeholder="6200"
-                      required
-                    />
-                  </div>
+                    <div class="form-group">
+                      <!-- Number -->
+                      <label for="street_number" class="control-label">Numero*</label>
+                      <input type="text" class="form-control" id="street_number" placeholder="6200" required/>
+                    </div>
 
-                  <div class="form-group">
-                    <!-- Zip Code-->
-                    <label for="zip_id" class="control-label"
-                      >Codigo Postal</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="zip_id"
-                      placeholder="#####"
-                      required
-                    />
+                    <div class="form-group">
+                      <!-- Zip Code-->
+                      <label for="zip_id" class="control-label">Codigo Postal*</label>
+                      <input type="text" class="form-control" id="zip_id" placeholder="#####" required/>
+                    </div>
                   </div>
-
-                  <div class="form-group col-12">
-                    <!-- Submit Button -->
-                    <button id="submitbutton" class="btn btn-outline-light btn-lg px-5" type="button" value="Submit" disabled="disabled">Registrarme</button>
-                  </div>
-                  <p class="para-2">¿Ya tienes una cuenta? <a href="../view/login.html">Inicia sesión</a></p>
+                    <div class="form-group col-12">
+                      <!-- Submit Button -->
+                      <button id="submitbutton" class="btn btn-outline-light btn-lg px-5" type="button" value="Submit" disabled="disabled">Registrarme</button>
+                    </div>
+                    <p class="para-2">¿Ya tienes una cuenta? <a href="../view/login.html">Inicia sesión</a></p>
                 </form>
               </div>
-
-              
             </div>
           </div>
         </div>

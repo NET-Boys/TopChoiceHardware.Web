@@ -13,3 +13,17 @@ body{
         background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
       
 }
+#orden-formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+
+}
+#dimension-registro{
+    width: 85% !important;
+}
+#form-box{
+    padding: 20px;
+}
+.form-group{
+    padding: 2%;
+}

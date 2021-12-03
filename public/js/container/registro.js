@@ -39,6 +39,5 @@ export const IndexRenderLocalidades =(provinciaId) =>{
 export const RegistroRender = ()=> {
     NavRender();
     FooterRender();
-    debugger
     getProvincias(RenderProvincias)
 }

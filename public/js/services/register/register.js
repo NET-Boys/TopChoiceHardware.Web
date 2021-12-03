@@ -27,11 +27,10 @@ function registerUser() {
         console.log(content);
         if (typeof(content.userId) != "undefined") {
           registerAdress(content.userId)
-          alert("Se ha generado el usuario!")
           window.location.href="../login"
         }
         else{
-          alert(content.message)
+          window.location.href="#usuarioExistente"
         }
       })();
 }
@@ -57,9 +56,8 @@ function registerAdress(userId){
         body: JSON.stringify(domicilioPostBody)
       });
       const content = await rawResponse.json();
-      console.log(content);
       if (typeof(content.addressId) != "undefined") {
-        alert("Registro exitoso!");
+        window.location.href="#registroExitoso"
       }
     })();
 }

@@ -102,7 +102,7 @@ export const PopUpSinResultado = () =>`
 
 
 export const PopUpErrorRegistrarse = () =>`
-    <div id="popupErrorLogin" class="overlay">
+    <div id="usuarioExistente" class="overlay">
           <div class="popup">
             <h3>¡Ups!</h3>
             <a class="close" href="#">&times;</a>
@@ -111,3 +111,13 @@ export const PopUpErrorRegistrarse = () =>`
             </div>
           </div>
         </div>`
+
+export const PopUpRegistroExitoso = () =>`
+  <div id="registroExitoso" class="overlay">
+        <div class="popup">
+        <div class="content modal-header">
+        <h3>Registro exitoso</h3>
+        </div>
+        <a class="close" href="#">&times;</a>
+        </div>
+    </div>`

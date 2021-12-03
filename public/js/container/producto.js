@@ -28,6 +28,19 @@ const ProductRender =(json) =>{
     let _titulo = document.getElementById("producto-titulo");
     _titulo.innerHTML+= ProductoTitulo(json.productName);
 
+    let stock=json.unitsInStock
+    if (stock<10) {
+        stock="<h2>Stock bajo</h2>"
+    }
+    else if(stock>9 && stock <50){
+        stock="<h2>Stock medio</h2>"
+    }
+    else{
+        stock="<h2>Stock alto</h2>"
+    }
+    let _stock=document.getElementById("cant-stock")
+    _stock.innerHTML+=stock;
+    debugger
     let _precio = document.getElementById("producto-precio");
     _precio.innerHTML+= ProductoPrecio(json.unitPrice);
 

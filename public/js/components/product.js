@@ -31,7 +31,7 @@ export const ProductoTitulo = (nombre) =>`
 `
 
 export const ProductoPrecio = (precio) =>`
-  <span id="precio">$${precio}</span>
+  <span id="precio"> Precio: $${precio}</span>
 `
 
 export const ProductoDescripcion = (descripcion) =>`

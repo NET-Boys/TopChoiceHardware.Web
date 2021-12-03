@@ -41,15 +41,18 @@
           <div class="col-md-6">
             <div class="product-dtl">
               <div class="product-info">
-                <div class="product-name">Variable Product</div>
+                <div class="product-name"></div>
                 
                 <div id="producto-precio" class="product-price-discount"></div>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              
+              <p id="cant-stock"></p>
               <div class="product-count">
-                <label for="size">Cantidad</label>
-                <form action="#" class="display-flex">
+                <label for="size">
+                  <div id="cantidad-texto">
+                  <h5>Cantidad</h5>
+                </div>
+                </label>
+                <form id="cantidad-productos"action="#" class="display-flex">
                 <div class="qtyminus">-</div>
                 <input id="qty" type="text" name="quantity" value="1" class="qty">
                 <div class="qtyplus">+</div>

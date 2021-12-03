@@ -4,10 +4,15 @@ body{
     padding-bottom: 210px;
     min-height:100vh;
 }
-
+.container{
+	width: 100% !important;
+	margin-left: 20% !important;
+	margin-right: 20% !important;
+}
 #thumb{
 	margin-top: 2em;
 }
+
 #product-box{
 	margin-top: 50px;
 }
@@ -20,7 +25,7 @@ body{
 	font-family: 'Poppins', sans-serif;
 }
  #precio{
-	font-size: 27px;
+	font-size: 32px;
     color: #8100d6;
     font-weight: 600;
  }
@@ -95,13 +100,14 @@ body{
 	height: 100px;
 }
 .product-name {
-	font-size: 22px;
+	font-size: 32px;
 	font-weight: 500;
 	line-height: 22px;
 	margin-bottom: 4px;
 }
+
 .product-price-discount {
-	font-size: 22px;
+	font-size: 32px;
     font-weight: 400;
     padding: 10px 0;
     clear: both;
@@ -203,6 +209,9 @@ body{
     color: #fff;
     cursor: pointer;
 }
+#qty{
+	width: 150px;
+}
 .product-count .qtyminus {
 	border-radius: 3px 0 0 3px; 
 }
@@ -214,6 +223,8 @@ body{
 	text-align: center;
 }
 .round-black-btn {
+	width: 400px;
+	text-align: center;
 	border-radius: 4px;
     background: #212529;
     color: #fff;

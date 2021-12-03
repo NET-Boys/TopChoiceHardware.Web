@@ -1,0 +1,58 @@
+@media (min-width: 417px) and (max-width: 567px) {
+    h1 {
+        font-size: 2em;
+   }
+}
+@media (min-width: 568px) {
+    h1 {
+        font-size: 3em;
+   }
+}
+#carrito-vacio-texto h1{
+    font-size: 50px;
+  }
+.boton-volver {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.boton-volver .buttons {
+    display: flex;
+    flex-direction: column;
+}
+.boton-volver a {
+    font-size: 30px;
+    padding: 15px 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin: 1em;
+}
+.boton-volver a:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+@media (min-width: 417px) and (max-width: 567px) {
+    .boton-volver a {
+        padding: 15px 30px;
+   }
+}
+@media (min-width: 568px) {
+    .boton-volver a {
+        padding: 15px 50px;
+   }
+}
+.button2 {
+    color: black;
+    background-color: #8100d6;
+    transition: 0.2s ease-in-out;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+}
+.button2:hover {
+    color: #8100d6;
+    background-color: black;
+    border-left: #8100d6 7px solid;
+    border-right: #8100d6 7px solid;
+}

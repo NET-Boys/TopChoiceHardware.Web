@@ -45,3 +45,14 @@ export const CarritoAside = (montoTotal) =>`
             <button id="boton-compra" class="checkout-cta" onclick="RealizarLaOrden()">Comprar</button>
           </div>
         </div>`
+
+export const CarritoVacio = () =>`
+  <div id="carrito-vacio-texto"class="text-center mt-5">
+    <h1>SU CARRITO ESTA VACIO</h1>
+  </div>
+  <div class="boton-volver">
+    <div class="buttons">
+      <a href="../" class="button2">Seguir buscando</a>
+    </div>
+  </div>
+`

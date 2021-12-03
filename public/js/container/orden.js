@@ -1,7 +1,7 @@
 import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { Footer } from "../components/footer.js";
 import { NavSinLogin,NavConLoginSinBusqueda,NavPrueba } from "../components/navbar/nav.js"
-import { CarritoProducto, CarritoAside } from "../components/carrito.js";
+import { CarritoProducto, CarritoAside,CarritoVacio } from "../components/carrito.js";
 import { getDomicilio, getProductsInCart } from "../services/fetchServices.js";
 import { AlgoritmoCarrito } from "../../lib/js/orderAlgorithm.js";
 import { PopUpCompra,PopUpErrorStock, PopUpCompraPrevia } from "../components/popups.js";
@@ -24,17 +24,29 @@ const PopUpRender=()=>{
     _popupRoot.innerHTML+=PopUpErrorStock();
     _popupRoot.innerHTML+=PopUpCompraPrevia();
 }
+
+const RenderCarritoVacio =()=>{
+    let _root=document.getElementById("root")
+    _root.innerHTML=""
+    let _carritoVacio=document.getElementById("carrito-vacio")
+    _carritoVacio.innerHTML+=CarritoVacio()
+}
 const RenderCarrito=(json)=>{
-    let _productos = document.getElementById("productos");
-    let _carritoAside = document.getElementById("orden-aside")
-    let montoTotal=0;
-    json.forEach(producto => {
-        _productos.innerHTML+=CarritoProducto(producto.productId,producto.imagen,producto.name,producto.price,producto.cantidad,producto.stock)
-        montoTotal+=(producto.price*producto.cantidad)
-    });
-    _carritoAside.innerHTML+=CarritoAside(montoTotal)
-    AlgoritmoCarrito()
-    RealizarOrdenNueva()
+    if (Object.keys(json).length>0) {
+        let _productos = document.getElementById("productos");
+        let _carritoAside = document.getElementById("orden-aside")
+        let montoTotal=0;
+        json.forEach(producto => {
+            _productos.innerHTML+=CarritoProducto(producto.productId,producto.imagen,producto.name,producto.price,producto.cantidad,producto.stock)
+            montoTotal+=(producto.price*producto.cantidad)
+        });
+        _carritoAside.innerHTML+=CarritoAside(montoTotal)
+        AlgoritmoCarrito()
+        RealizarOrdenNueva()
+    }
+    else{
+        RenderCarritoVacio()
+    }
 }
 
 function RealizarOrdenNueva (){
@@ -78,7 +90,6 @@ export const OrdenRender = ()=> {
     getProductsInCart(JSON.parse(window.localStorage.getItem("order")),RenderCarrito)
 }
 export const RealizarOrden =(usuarioId, metodoDePago, monto, email)=>{
-    
     getDomicilio(usuarioId,metodoDePago,monto,email,FinalizarOrden)
 }
 

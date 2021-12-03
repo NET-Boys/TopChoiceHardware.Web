@@ -3,6 +3,10 @@ body{
 	position: relative;
     padding-bottom: 210px;
     min-height:100vh;
+	background-image: url(../img/back.png);
+  	background-size:     cover;                      
+  	background-repeat:   no-repeat;
+  	background-position: center center; 
 }
 .container{
 	width: 100% !important;

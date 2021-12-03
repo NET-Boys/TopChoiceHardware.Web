@@ -8,8 +8,8 @@ export const NavSinLogin = () =>`
         
         <div id = "margen-barra" class="" id="">
           <div class="d-flex align-items-center">
-            <a class="btn btn-link px-3 me-2" href="../../login" role="button">Ingresar</a>
-            <a class="btn btn-primary me-3" href="../../registro" role="button">Registrarme</a>
+            <a id="button-ingresar"class="btn btn-primary px-3 me-2" href="../../login" role="button">Ingresar</a>
+            <a id="button-registrarse" class="btn btn-primary me-3" href="../../registro" role="button">Registrarme</a>
           </div>
         </div>
     </div>

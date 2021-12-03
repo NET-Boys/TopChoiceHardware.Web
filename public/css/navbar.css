@@ -6,7 +6,26 @@
     padding-left: 15%;
     max-width: 300px;
 }
-
+#button-ingresar{
+    color:#ffffff!important;
+    border-color: #8064A2;
+    background-color: transparent;
+    margin-right: 0.8rem !important;
+}
+#button-ingresar:hover{
+    color:#ffffff!important;
+    border-color: #ffffff;
+    transition: 1s;
+}
+#button-registrarse{
+    background:linear-gradient(90deg, rgba(147,0,214,1) 0%, rgba(123,40,255,1) 100%)!important ;
+    border-color: #8064A2;
+}
+#button-registrarse:hover{
+    background:linear-gradient(90deg, rgba(123,40,255,1) 0%, rgba(147,0,214,1) 100%)!important ;
+    border-color: #ffffff;
+    transition: 1s;
+}
 .nav-item{
     margin-left: 20px;
     margin-right: 20px;

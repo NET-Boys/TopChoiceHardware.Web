@@ -1,8 +1,12 @@
 export const CardProducto = (productoId,imagen, nombre, descripcion,precio,stock) =>`
         <div class="product-card">
+        <a href='../producto?productoId=${productoId}'>
             <div class="product-tumb">
+            
                 <img src="${imagen}" alt="">
+            
             </div>
+            </a>
             <div class="product-details">
                 <div class="titulo-descripcion">
                     <h1><a id="${productoId}" href='../producto?productoId=${productoId}'>${nombre}</a></h1>

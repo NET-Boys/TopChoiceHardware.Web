@@ -18,7 +18,6 @@ export const LoginUser=(callback) =>{
         }else{
           window.location.href='#popupErrorLogin'
         }
-        
       })();
 }
 

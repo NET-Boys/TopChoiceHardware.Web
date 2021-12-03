@@ -4,7 +4,7 @@ import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
 import { CarritoProducto, CarritoAside } from "../components/carrito.js";
 import { getDomicilio, getProductsInCart } from "../services/fetchServices.js";
 import { AlgoritmoCarrito } from "../../lib/js/orderAlgorithm.js";
-import { PopUpCompra } from "../components/popups.js";
+import { PopUpCompra,PopUpErrorStock, PopUpCompraPrevia } from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -21,6 +21,8 @@ const NavbarLogin =(email) =>{
 const PopUpRender=()=>{
     let _popupRoot = document.getElementById("popups");
     _popupRoot.innerHTML+=PopUpCompra();
+    _popupRoot.innerHTML+=PopUpErrorStock();
+    _popupRoot.innerHTML+=PopUpCompraPrevia();
 }
 const RenderCarrito=(json)=>{
     let _productos = document.getElementById("productos");
@@ -33,7 +35,6 @@ const RenderCarrito=(json)=>{
     _carritoAside.innerHTML+=CarritoAside(montoTotal)
     AlgoritmoCarrito()
     RealizarOrdenNueva()
-    //RealizarLaOrden()
 }
 
 function RealizarOrdenNueva (){
@@ -52,9 +53,9 @@ function RealizarOrdenNueva (){
     }
 }
 const FinalizarOrden=(json)=>{
-    
-    
+    localStorage.setItem('order', '[]');
 }
+
 export const OrdenRender = ()=> {
     FooterRender();
     PopUpRender();
@@ -77,6 +78,7 @@ export const OrdenRender = ()=> {
     getProductsInCart(JSON.parse(window.localStorage.getItem("order")),RenderCarrito)
 }
 export const RealizarOrden =(usuarioId, metodoDePago, monto, email)=>{
+    
     getDomicilio(usuarioId,metodoDePago,monto,email,FinalizarOrden)
 }
 

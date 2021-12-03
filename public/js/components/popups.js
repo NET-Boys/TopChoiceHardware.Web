@@ -62,15 +62,30 @@ export const PopUpErrorLogin = () =>`
 export const PopUpCompra = () =>`
   <div id="popup-gracias" class="overlay">
     <div class="popup">
-      <div class="content modal-header">
+      <div class="content modal-header text-center">
       <h3>Su ha registrado la orden correctamente</h3>
       </div>
-      <a class="close" href="#">&times;</a>
-      <div class="content modal-body">
+      <div class="content modal-body text-center">
           Por favor revise su casilla de e-mail para continuar con la operación
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark active" onclick=window.location.href="../../login"> Login</button>
+        <button type="button" class="btn btn-outline-dark active" onclick=window.location.href="../../">Aceptar</button>
       </div>
     </div>
   </div>`
+
+export const PopUpCompraPrevia = () =>`
+  <div id="popup-compra-previa" class="overlay">
+    <div class="popup">
+      <div class="content modal-header text-center">
+      <h3>¡Demasiado tarde!</h3>
+      </div>
+      <div class="content modal-body text-center">
+          Alguien ya hizo la reserva de los productos, por favor vuelva a intentarlo nuevamente
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark active" onclick=window.location.href="../../">Aceptar</button>
+      </div>
+    </div>
+  </div>`
+

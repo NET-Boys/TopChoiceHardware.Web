@@ -125,5 +125,5 @@ a
 .product-card:hover {
     -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.8); 
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.8);
-    transition: 0.5s;
+    transition: 0.3s;
 }

@@ -138,15 +138,14 @@ export const EliminarProductos =(usuarioId,metodoDePagoId,direccion,monto,email,
           },
           body: JSON.stringify(jsonBody)
         })
-        .then((httpResponse)=>{
-            if(httpResponse.ok)
-                alert('Los productos se han eliminado')
-                return httpResponse.json()
-        })
-        .then(body => {
-            generarOrden(usuarioId,metodoDePagoId,direccion,monto,email,callback)
-        })
-      })();
+        const content = await rawResponse.json();
+        if(content.status === "Success"){
+            EliminarProductosHandler(content,usuarioId,metodoDePagoId,direccion,monto,email,callback)
+        }else{
+            localStorage.setItem('order','[]');
+          window.location.href='#popup-compra-previa'
+        }
+    })();
 }
 
 export const generarOrden =(usuarioId,metodoDePagoId,direccion,monto,email,callback)=>{
@@ -169,7 +168,6 @@ export const generarOrden =(usuarioId,metodoDePagoId,direccion,monto,email,callb
         })
         .then((httpResponse)=>{
             if(httpResponse.ok)
-                alert('Gracias por su compra')
                 window.location.href='#popup-gracias'
                 return httpResponse.json()
         })
@@ -178,3 +176,9 @@ export const generarOrden =(usuarioId,metodoDePagoId,direccion,monto,email,callb
         })
       })();
 }
+
+
+async function EliminarProductosHandler(body,usuarioId,metodoDePagoId,direccion,monto,email,callback){
+    var json = await body;
+    generarOrden(usuarioId,metodoDePagoId,direccion,monto,email,callback)
+  }

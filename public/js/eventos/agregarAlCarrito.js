@@ -92,6 +92,5 @@ function ActualizarStock(productId,cantidad){
             productos[i].cantidad=cantidad
         }
     }
-    
     localStorage.setItem('order', JSON.stringify(productos));
 }

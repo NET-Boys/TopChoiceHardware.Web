@@ -93,7 +93,7 @@ export const NavConLogin = (email) =>`
               </li>
               <li class="nav-item">
                 <a id="buy-button" href="../ordenDeCompra">
-                  <img src="../../img/buy.png" alt="imagenBoton"></img>
+                  <img id="icono-carrito" src="../../img/buy.png" alt="imagenBoton"></img>
                 </a>
               </li>
             </ul>
@@ -132,7 +132,7 @@ export const NavConLoginSinBusqueda = (email) =>`
               </li>
               <li class="nav-item">
                 <a id="buy-button" href="../ordenDeCompra">
-                  <img src="../../img/buy.png" alt="imagenBoton"></img>
+                  <img id="icono-carrito" src="../../img/buy.png" alt="imagenBoton"></img>
                 </a>
               </li>
             </ul>
@@ -158,7 +158,7 @@ export const asd =() =>`
               ${email}
             </a>
             <a id="buy-button" href="../ordenDeCompra">
-              <img src="../../img/buy.png" alt="imagenBoton"></img>
+              <img id="icono-carrito" src="../../img/buy.png" alt="imagenBoton"></img>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li>

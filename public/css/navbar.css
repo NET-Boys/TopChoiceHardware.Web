@@ -6,6 +6,10 @@
     padding-left: 8%;
     max-width: 300px;
 }
+#icono-carrito:hover{
+    transform: rotate(360deg);
+    transition: 1s;
+}
 #button-ingresar{
     color:#ffffff!important;
     border-color: #8064A2;

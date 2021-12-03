@@ -1,5 +1,8 @@
 body{
 	font-family: 'Poppins', sans-serif;
+	position: relative;
+    padding-bottom: 210px;
+    min-height:100vh;
 }
 
 #thumb{

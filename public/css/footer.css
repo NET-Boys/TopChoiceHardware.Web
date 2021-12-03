@@ -1,9 +1,7 @@
-html {
-    min-height: 100%;
-    position: relative;
-}
+
 footer{
     background-color: black;
+    position: absolute;
     bottom: 0;
     width: 100%;
    }
@@ -13,7 +11,7 @@ footer{
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    font: bold 16px sans-serif;
+    font: bold 16px;
     
     padding: 20px 50px;
    }
@@ -31,7 +29,7 @@ footer{
     
    .footer-distributed h3{
     color:  #ffffff;
-    font: normal 36px 'Cookie', cursive;
+    font: normal 36px , cursive;
     margin: 0;
    }
     

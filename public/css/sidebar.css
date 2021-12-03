@@ -27,8 +27,11 @@ input[type="radio"] {
 }
 #sidebar{
   background-color: lightgrey;
-  height: 100%;
+  position: absolute;
+  height:89%;
+  width: 16%;
 }
+
 .form-control + .form-control {
   margin-top: 1em;
 }

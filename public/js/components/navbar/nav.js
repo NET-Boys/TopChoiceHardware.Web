@@ -124,7 +124,7 @@ export const NavConLoginSinBusqueda = (email) =>`
                   ${email}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a id="cerrar-sesion" href="" class="dropdown-item" onclick='CerrarSesion()'>Cerrar Sesión</a></li>
+                  <li><a id="cerrar-sesion" class="dropdown-item" onclick='CerrarSesion()'>Cerrar Sesión</a></li>
                 </ul>
               </div>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto">

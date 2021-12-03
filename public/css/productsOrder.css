@@ -3,6 +3,9 @@
 
 body{
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  padding-bottom: 210px;
+  min-height:100vh;
 }
 html,
 html a {
@@ -55,13 +58,18 @@ button {
 }
 
 button {
-  background-color: #666;
+  background-color: rgb(0, 0, 0);
   color: #fff;
+  border: 3px solid white;
+  border-radius: 6px;
 }
 
 button:hover,
 button:focus {
-  background-color: #555;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 3px solid #8100d6;
+  transition: .5s;
 }
 
 #thumb-carrito,
@@ -106,7 +114,7 @@ main {
   margin: 0 auto;
   overflow: hidden;
   padding: 1rem 0;
-  width: 960px;
+  width: 100%;
 }
 
 .basket,
@@ -148,6 +156,7 @@ label {
 
 
 .basket-labels {
+  font-size: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
@@ -181,6 +190,12 @@ li.subtotal:before {
 
 .subtotal {
   text-align: right;
+  
+}
+#subtotal-monto{
+  color: #8100d6;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .remove {
@@ -201,19 +216,22 @@ li.subtotal:before {
 }
 
 .item-heading {
-  padding-left: 30%;
+  padding-left: 0%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 li.price{
-  padding-left: 5%;
+  padding-left: 2%;
+  padding-right: 0%;
 }
 li.quantity{
-  padding-left: 5%;
+  padding-left: 3%;
+  padding-right: 0%;
 }
 div.quantity{
-  padding-left: 6%;
+  padding-left: 5%;
+  padding-right: 0%;
 }
 .basket-product {
   border-bottom: 1px solid #ccc;
@@ -234,7 +252,7 @@ div.quantity{
 }
 
 .product-details {
-  padding: 0 1.5rem;
+  padding-right: 5%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -265,13 +283,21 @@ aside {
 }
 
 .summary-total-items {
-  color: #666;
-  font-size: 0.875rem;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
   text-align: center;
 }
-
+#boton-eliminar{
+  font-size: 15px;
+}
+#boton-eliminar:hover{
+  font-size: 15px;
+  color: #b60000;
+}
 .summary-subtotal,
 .summary-total {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   clear: both;

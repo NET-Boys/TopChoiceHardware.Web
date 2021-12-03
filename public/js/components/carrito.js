@@ -12,15 +12,15 @@ export const CarritoProducto = (productId,imagen,name,price,cantidad,stock) =>`
           <div class="quantity">
             <input id="input${productId}" type="number" value="${cantidad}" min="1" max="${stock}"class="quantity-field" onclick='ActualizarStock(${productId},this.value)'>
           </div>
-          <div class="subtotal">${price*cantidad}</div>
+          <div id="subtotal-monto" class="subtotal">${price*cantidad}</div>
           <div class="remove">
-            <button onclick="EliminarProducto(${productId})">Eliminar</button>
+            <button id="boton-eliminar" onclick="EliminarProducto(${productId})">Eliminar</button>
           </div>
         </div>
 `
 export const CarritoAside = (montoTotal) =>`
 <div class="summary">
-          <div class="summary-total-items"><h6><span class="total-items"></span> Items en tu carrito</h6></div>
+          <div class="summary-total-items"><h5 ><span class="total-items"></span> Items en tu carrito</h5></div>
           <div class="summary-subtotal">
             <div class="subtotal-title">Subtotal</div>
             <div class="subtotal-value final-value" id="basket-subtotal">${montoTotal}</div>

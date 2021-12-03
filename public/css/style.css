@@ -1,11 +1,14 @@
 body{
-    height:100%;
+    
     display: inline-flexbox;
     flex-direction: column-reverse;
     font-family: 'Poppins', sans-serif !important;
     align-items: flex-start;
     justify-content: left;
     background-color:rgb(163, 162, 162);
+    position: relative;
+    padding-bottom: 210px;
+    min-height:100vh;
 }
 button{
     background-color: #063780; 

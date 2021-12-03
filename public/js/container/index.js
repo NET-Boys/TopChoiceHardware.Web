@@ -17,6 +17,8 @@ const FooterRender =() =>{
 }
 const RenderBusqueda=(json) =>{
     let _root = document.getElementById("root");
+    let _carruselOfertas = document.getElementById("carrusel-ofertas")
+    _carruselOfertas.innerHTML=""
     _root.innerHTML=""
     if (Object.keys(json).length==0) {
         window.location.href="#popupSinResultado"

@@ -5,13 +5,10 @@ export const Footer = () =>`
             <p class="footer-links">
                 <a href="../../index">Inicio</a>
                 ·
-                <a href="../../login">Login</a>
-                ·
-                <a href="../../registro">Registrarse</a>
-                ·
                 <a href="#">Contacto</a>
             </p>
             <p class="footer-company-name">TopChoise Hardware &copy; 2021</p>
+            
         </div>
 
         <div class="footer-center">
@@ -35,7 +32,8 @@ export const Footer = () =>`
             <div class="footer-icons">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a><p></p>
+                <p class="footer-company-name">Realizado por: Matías Nahuel Salinas, Aaron Samuel Bernal, Camilo Jail Ñañez, Jose Luis Fernández y Rodrigo Iván Lago.</p>
             </div>
         </div>
         

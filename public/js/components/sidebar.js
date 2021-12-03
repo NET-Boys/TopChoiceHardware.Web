@@ -48,13 +48,13 @@ export const Sidebar = (categoria, categoryId, categoryName, order, unitPrice) =
     </div>
 `
 export const RadioBtnCategoria = (categoryId, categoryName) =>`
-<input type="radio" class="radio" id="contactChoice1"
-name="contact" value="${categoryId}">
-<label for="contactChoice1">${categoryName}</label>
+    <input type="radio" class="radio" id="contactChoice1"
+        name="contact" value="${categoryId}">
+    <label for="contactChoice1">${categoryName}</label>
 `
 export const RadioBtnOrden = (order,unitPrice) => `
-<input type="radio" class="radio" id="orderChoice"
-name="orden" value="${order}">
-<label for="orderChoice">${unitPrice}</label>
+    <input type="radio" class="radio" id="orderChoice"
+        name="orden" value="${order}">
+    <label for="orderChoice">${unitPrice}</label>
 `
 

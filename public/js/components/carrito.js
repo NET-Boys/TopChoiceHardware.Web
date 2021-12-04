@@ -39,7 +39,8 @@ export const CarritoAside = (montoTotal) =>`
           </div>
           <div class="summary-total">
             <div class="total-title">Total</div>
-            <div id="monto-final" class="total-value final-value" id="basket-total">${montoTotal}</div>
+            <div class="total-value final-value monto-prueba" id="basket-total">${montoTotal}</div>
+            <!--<h1 id="monto-final" style="display: none;">${montoTotal}</h1>-->
           </div>
           <div class="summary-checkout">
             <button id="boton-compra" class="checkout-cta" onclick="RealizarLaOrden()">Comprar</button>

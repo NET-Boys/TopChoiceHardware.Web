@@ -49,19 +49,17 @@ const RenderCarrito=(json)=>{
     }
 }
 
-function RealizarOrdenNueva (){
+function  RealizarOrdenNueva (){
     document.getElementById("boton-compra").onclick= function(){
-        debugger
-        let monto=document.getElementById("monto-final").innerText
         let select= document.getElementById("select-metodo");
         let medioDePago=select.options[select.selectedIndex].value
         let token=window.localStorage.getItem("Top Choise User")
         var decoded = jwtDecode(token);
         let usuarioId=decoded.payload.UserId
         let email=decoded.payload.email
-        debugger
+        let elementoConMonto=document.getElementsByClassName("monto-prueba")[0].innerHTML
+        let monto=parseInt(elementoConMonto)
         RealizarOrden(usuarioId,medioDePago,monto,email)
-        debugger
     }
 }
 const FinalizarOrden=(json)=>{

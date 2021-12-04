@@ -29,7 +29,11 @@ const ProductRender =(json) =>{
     _titulo.innerHTML+= ProductoTitulo(json.productName);
 
     let stock=json.unitsInStock
-    if (stock<10) {
+    debugger
+    if (stock==0) {
+        stock="<h2>Sin stock</h2>"
+    }
+    else if (stock<10) {
         stock="<h2>Stock bajo</h2>"
     }
     else if(stock>9 && stock <50){

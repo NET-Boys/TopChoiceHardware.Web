@@ -77,10 +77,10 @@ export const PopUpCompra = () =>`
 export const PopUpCompraPrevia = () =>`
   <div id="popup-compra-previa" class="overlay">
     <div class="popup">
-      <div class="content modal-header text-center">
+      <div class="content modal-header ">
       <h3>¡Demasiado tarde!</h3>
       </div>
-      <div class="content modal-body text-center">
+      <div class="content modal-body ">
           Alguien ya hizo la reserva de los productos, por favor vuelva a intentarlo nuevamente
       </div>
       <div class="modal-footer">

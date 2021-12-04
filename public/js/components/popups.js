@@ -63,7 +63,7 @@ export const PopUpCompra = () =>`
   <div id="popup-gracias" class="overlay">
     <div class="popup">
       <div class="content modal-header text-center">
-      <h3>Su ha registrado la orden correctamente</h3>
+      <h3>Se ha registrado la orden correctamente</h3>
       </div>
       <div class="content modal-body text-center">
           Por favor revise su casilla de e-mail para continuar con la operación
@@ -107,7 +107,7 @@ export const PopUpErrorRegistrarse = () =>`
             <h3>¡Ups!</h3>
             <a class="close" href="#">&times;</a>
             <div class="content">
-              El email ya esta registrado
+              El usuario ya existe
             </div>
           </div>
         </div>`

@@ -30,3 +30,17 @@ body{
 .form-group{
     padding: 2%;
 }
+
+.ingreso-formulario:invalid {
+    background-color: rgb(255, 180, 180);
+}
+.ingreso-formulario:valid {
+    background-color: rgb(186, 255, 180);
+}
+
+.select-direccion-valid{ 
+    background-color: rgb(186, 255, 180); 
+}
+.select-direccion-invalid{ 
+    background-color: rgb(255, 180, 180); 
+}

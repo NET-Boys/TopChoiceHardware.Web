@@ -2,7 +2,7 @@ import { SelectProvincia,AddOptions } from "../components/selectProvincia.js"
 import { getProvincias, getLocalidades } from "../services/fetchServices.js";
 import { NavSinLogin, NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
-import { PopUpErrorRegistrarse,PopUpRegistroExitoso } from "../components/popups.js";
+import { PopUpErrorRegistrarse,PopUpRegistroExitoso,PopUpCampos } from "../components/popups.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");
@@ -35,6 +35,7 @@ const PopUpRender=()=>{
     let _popupRoot = document.getElementById("popups");
     _popupRoot.innerHTML+=PopUpErrorRegistrarse();
     _popupRoot.innerHTML+=PopUpRegistroExitoso();
+    _popupRoot.innerHTML+=PopUpCampos();
 }
 
 export const IndexRenderLocalidades =(provinciaId) =>{

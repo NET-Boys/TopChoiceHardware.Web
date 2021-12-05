@@ -1,3 +1,14 @@
+export const PopUpCampos = () =>`
+  <div id="popupFaltanCampos" class="overlay">
+          <div class="popup">
+            <h3>Advertencia</h3>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              Debe llenar todos los campos
+            </div>
+          </div>
+        </div>`
+
 export const PopUpSatisfactorio = () =>`
 <div id="popup1" class="overlay">
       <div class="popup">

@@ -1,5 +1,5 @@
 import {jwtDecode} from "../../lib/js/jwt-decode.js";
-import { NavSinLoginSinBusqueda,NavConLogin } from "../components/navbar/nav.js";
+import { NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { LoginBox } from "../components/loginBox.js";
 import { LoginUser } from "../services/login/login.js";

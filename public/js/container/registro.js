@@ -1,6 +1,6 @@
 import { SelectProvincia,AddOptions } from "../components/selectProvincia.js"
 import { getProvincias, getLocalidades } from "../services/fetchServices.js";
-import { NavSinLogin, NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
+import { NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { PopUpErrorRegistrarse,PopUpRegistroExitoso,PopUpCampos } from "../components/popups.js";
 

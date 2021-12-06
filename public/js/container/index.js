@@ -1,10 +1,10 @@
 import { jwtDecode } from "../../lib/js/jwt-decode.js";
 import { CardProducto } from "../components/card.js"
 import { Footer } from "../components/footer.js";
-import { NavSinLogin,NavConLogin,NavPrueba } from "../components/navbar/nav.js"
-import { getProductos, getCategoria,getProductosByFilter } from "../services/fetchServices.js";
+import { NavSinLogin,NavConLogin } from "../components/navbar/nav.js"
+import { getProductos,getProductosByFilter } from "../services/fetchServices.js";
 import { PopUpAlgoSalioMal,PopUpSatisfactorio,PopUpErrorStock,PopUpLoginNecesario, PopUpSinResultado } from "../components/popups.js";
-import { Sidebar, RadioBtnCategoria } from "../components/sidebar.js";
+import { Sidebar } from "../components/sidebar.js";
 
 const  NavRender =() =>{
     let _root = document.getElementById("navigator");

@@ -1,5 +1,5 @@
 import { jwtDecode } from "../../lib/js/jwt-decode.js";
-import {  NavConLoginSinBusqueda,NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
+import { NavConLoginSinBusqueda,NavSinLoginSinBusqueda } from "../components/navbar/nav.js";
 import { Footer } from "../components/footer.js";
 import { getProductoById } from "../services/fetchServices.js";
 import { ProductoTitulo, ProductoPrecio,ProductoDescripcion, ProductoLink, ProductoSlider, ProductoBotonAgregar} from "../components/product.js";
